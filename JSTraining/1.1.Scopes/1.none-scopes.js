@@ -1,18 +1,16 @@
-console.log('Non-scopes blockes')
-
-function g() {
+function generateHandler() {
     var handlers = [];
     for (var index = 0; index < 3; index++) {
         var temp = index;
-        var element = function(){
+        var handlerFn = function(){
             console.log('Handler with argument: '+temp);
         }
-        handlers.push(element);
+        handlers.push(handlerFn);
     }
     return handlers;
 }
 
-var handlers = g();
+var handlers = generateHandler();
 
 function executeHandlers(handlers){
     handlers.forEach(function(item){

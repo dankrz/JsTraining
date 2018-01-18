@@ -1,17 +1,17 @@
 console.log('Non-scopes blockes fix with let')
 
-function g() {
+function generateHandler() {
     var handlers = [];
     for (let index = 0; index < 3; index++) {
-        var element = function(){
+        var handlerFn = function(){
             console.log('Handler with argument: '+index);
         }
-        handlers.push(element);
+        handlers.push(handlerFn);
     }
     return handlers;
 }
 
-var handlers = g();
+var handlers = generateHandler();
 
 function executeHandlers(handlers){
     handlers.forEach(function(item){
