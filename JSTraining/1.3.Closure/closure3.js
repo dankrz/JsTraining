@@ -23,4 +23,4 @@ var counter = (function() {
   counter.decrement();
   console.log(counter.value()); // logs 1
   
-  //console.log(counter.privateCounter);
+  console.log(counter.privateCounter);
