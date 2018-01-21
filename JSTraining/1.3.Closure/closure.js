@@ -1,5 +1,6 @@
 function makeFunc() {
     var name = 'Volvo';
+    
     function displayName() {
       console.log(name);
     }
