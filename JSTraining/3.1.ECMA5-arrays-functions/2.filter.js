@@ -10,6 +10,7 @@ var orders = [
 var hondaItems = orders.filter(function(item){
     return item.comapny === 'Honda'
 });
+
 console.log("hondaItems ids:"+hondaItems[0].id+", "+hondaItems[1].id)
 console.log("hondaItems length:"+hondaItems.length);
 
